@@ -1,0 +1,976 @@
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/index.css ***!
+  \*********************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap);
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/fairytale-page.css ***!
+  \******************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap);
+/*!********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/menu.css ***!
+  \********************************************************************/
+
+.menu-burger {
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  width: 900px;
+  background-color: #ffffff;
+  height: 0;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  transition: height 0.4s ease;
+  z-index: 10;
+}
+
+
+.menu-active {
+  height: 471px;
+}
+
+.menu-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* Заголовок */
+.menu-content h2 {
+  position: absolute;
+  top: 60px;
+  left: calc(50% - 380px);
+  width: 760px;
+  font-family: "Ostrovsky";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #061538;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Две колонки */
+.menu-columns {
+  position: absolute;
+  top: 141px;
+  left: calc(50% - 393px);
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 786px;
+  height: 268px;
+  padding-left: 21.8px;
+}
+
+.menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 360px;
+  line-height: 120%;
+  color: #061538;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-column-left {
+  width: 360px;
+  padding-right: 52px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.menu-column-right {
+  width: 360px;
+  padding-right: 26px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.menu-column-left li {
+  color: #061538;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-family: "Manrope";
+  font-weight: 500;
+}
+.menu-column-left a {
+  text-decoration: none;
+  color: #061538;
+  outline: none;
+}
+.menu-column-right a {
+  outline: none;
+  text-decoration: none;
+  color: #061538;
+}
+.menu-column-right li {
+  color: #061538;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-family: "Manrope";
+  font-weight: 500;
+}
+
+.menu-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  width: 437px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #41b9ff;
+  z-index: -1;
+}
+
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/index.css (1) ***!
+  \*************************************************************************/
+@font-face {
+  font-family: "Ostrovsky";
+  font-style: normal;
+  font-weight: bold;
+  src: url(271ab517a56431153e65.woff2) format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+  color: #061538;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fcfcfc;
+}
+
+.ostrovsky-caps {
+  font-size: calc(20px + 20 * (100vw - 320px) / 1640);
+  font-family: Ostrovsky;
+}
+
+.manrope {
+  font-family: Manrope;
+  font-size: calc(16px + 20 * (100vw - 320px) / 1640);
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  max-width: 1840px;
+  margin: 0 auto;
+  padding: 0 40px;
+  margin-bottom: 40px;
+}
+
+.header-container {
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 23px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fcfcfc;
+}
+
+.header,
+.footer-bottom {
+  box-shadow: 0px -1px 20px #06153833;
+}
+
+/* hero */
+
+.hero-container {
+  img {
+    max-width: 100%;
+  }
+}
+
+/* Карусель */
+
+.title-carousels {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.book-container {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.book-wrapper {
+  display: flex;
+  gap: 80px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.book {
+  flex: 0 0 calc((100% / 3.5) - 80px);
+  text-align: center;
+  overflow: hidden;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.buttons {
+  z-index: 10;
+  position: absolute;
+  top: calc(50% - 50px);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 35px;
+}
+
+.scroll-btn {
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  background: none;
+  position: absolute;
+}
+
+.scroll-btn.left {
+  left: 75px;
+  display: block;
+}
+.scroll-btn.right {
+  right: 75px;
+  display: block;
+}
+
+/* Преимущества-1 */
+
+.infographics {
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+  width: 90%;
+}
+
+.infographics-content {
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    max-width: 50%;
+    max-width: 650px;
+
+    &.left {
+      max-height: 700px;
+    }
+  }
+}
+
+.about-book {
+  margin-bottom: 30px;
+}
+
+.about-book-text {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.description-books {
+  font-family: Manrope;
+  font-weight: bold;
+  font-size: calc(16px + 16 * (100vw - 320px) / 1640);
+}
+
+/* Слайдер */
+
+.slider {
+  position: relative;
+}
+
+.slide-container {
+  height: 800px;
+  position: relative;
+  max-width: 1600px;
+}
+
+.slider-btn-container {
+  position: absolute;
+  max-width: 1600px;
+  width: 100%;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-family: Manrope;
+  font-weight: bold;
+  font-size: calc(16px + 16 * (100vw - 320px) / 1640);
+
+  .shop {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.1s ease, box-shadow 0.2s;
+    &:hover {
+      transform: scale(1.006);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .about {
+    transition: color 0.3s ease;
+    &:hover {
+      color: #fcfcfc;
+    }
+  }
+}
+
+.slider-arrows {
+  display: flex;
+  gap: 15px;
+  max-height: 50px;
+
+  .slider-left{
+    cursor: pointer;
+    &:hover {
+      path {
+        
+        fill: #061538;
+      }
+    }
+  }
+  .slider-right {
+    cursor: pointer;
+    &:hover {
+      path {
+        stroke: #061538;
+        &.arrow{
+          fill: #061538;
+        }
+      }
+    }
+  }
+  
+}
+
+/* Слайд зимняя сказка */
+
+.winter-stories {
+  background-color: #41b9ff;
+}
+
+.winter-stories-new {
+  color: #ffffff;
+  padding: 0 10px 8px 14px;
+  border: 3px solid white;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.winter-stories-content {
+  display: flex;
+}
+
+.winter-stories-text {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding-top: 100px;
+}
+
+.winter-stories-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-right: -20px;
+}
+
+.winter-stories-image {
+  display: flex;
+  align-items: center;
+}
+
+/* баннер 5 лет */
+
+.jb-outside-container {
+  position: relative;
+  justify-content: center;
+  max-width: 1920px;
+}
+
+.jubilee-banner {
+  background-color: #427143;
+
+  .confetti {
+    position: absolute;
+  }
+
+  .confetti-top {
+    top: 0;
+    left: 0;
+  }
+
+  .confetti-bottom {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.jb-container {
+  max-width: 1525px;
+  width: 100%;
+}
+
+.jb-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  padding-top: 70px;
+
+  .jb-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+
+    .jb-title {
+      font: 600 110px Ostrovsky;
+      color: #fcfcfc;
+    }
+
+    .jb-description {
+      font: 600 32px Ostrovsky;
+      color: #fcfcfc;
+      line-height: 50px;
+    }
+  }
+}
+
+.jb-images {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  gap: 30px;
+  margin-top: -250px;
+
+  .jb-image22 {
+    margin-left: -10px;
+  }
+  .jb-image23 {
+    padding-bottom: 75px;
+    margin-left: -12px;
+  }
+  .jb-image24 {
+    padding-bottom: 200px;
+    margin-left: -7px;
+  }
+}
+
+/* Лозунги */
+
+.slogan {
+  display: flex;
+  align-items: center;
+  max-width: 1527px;
+  gap: 40px;
+}
+
+.slogan-2,
+.slogan-1 {
+  justify-content: center;
+}
+
+.slogan-article {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.rabbit,
+.city,
+.book-fragment {
+  width: 50%;
+}
+
+.slogan-2 {
+  .article-top {
+    max-width: 680px;
+  }
+}
+
+/* Преимущества-2 */
+
+.advantages-2 {
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.advantages {
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.advantages2-article {
+  max-width: 640px;
+}
+
+.group-advantages {
+  display: flex;
+  gap: 20px;
+}
+
+/* footer */
+
+.social {
+  margin-block: 60px;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.social-networks {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-bottom-container {
+  justify-content: space-between;
+  padding-block: 40px;
+  margin-bottom: 0;
+
+  .footer-logo-policy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font: 500 20px Manrope;
+  }
+
+  .contacts {
+    font: 600 24px Manrope;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/fairytale-page.css (1) ***!
+  \**********************************************************************************/
+@font-face {
+  font-family: "Ostrovsky";
+  font-style: normal;
+  font-weight: bold;
+  src: url(271ab517a56431153e65.woff2) format("woff2");
+}
+
+.back a {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin: 0 auto;
+  max-width: 1610px;
+  padding: 100px 40px;
+}
+
+.description-title {
+  font-family: Ostrovsky, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description-content {
+  display: flex;
+  /* flex-wrap: wrap; -это лучше вставить когда размер экрана будет ~1300*/
+  justify-content: space-between;
+}
+
+.description-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 600px;
+}
+
+.description-paragraph {
+  font-weight: 400;
+}
+
+.btnGeneral {
+  padding: 20px 40px;
+  background-color: #28ae60;
+  color: #fcfcfc;
+  border-radius: 200px;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  font-family: Manrope, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.description-image {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  max-width: 755px;
+}
+
+/* Карусель с синим фоном */
+
+.carousels.snowy {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 256px;
+  height: 1113px;
+  width: 100%;
+}
+
+.paper-blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.book-container.queeny {
+  position: relative;
+  overflow: hidden;
+  /* width: calc(600px * 3 + 1px * 2);  */
+  /* height: 1113px;  */
+}
+
+.book-wrapper {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+}
+
+.book.sliders {
+  flex: 0 0 calc((100% / 3) - 40px);
+  max-width: 600px;
+  height: 600px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.book img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* .book-container.queeny .book-wrapper {
+  width: calc(600px * 5 + 20px * 4);
+} */
+
+/* Карусель с авторами */
+
+.carousels {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.book-wrapper.authors {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+}
+
+.photos-authors {
+  display: flex;
+  gap: 20px;
+}
+
+.name-people {
+  font-family: Manrope;
+  font-size: 32px;
+  color: #061538;
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+.full-info {
+  font-family: Manrope;
+  font-size: 32px;
+  color: #061538;
+  font-weight: 600;
+  line-height: 120%;
+  max-width: 554px;
+  text-align: start;
+  padding-left: 20px;
+}
+
+.book.author {
+  overflow: visible;
+  flex: auto;
+  flex: 0 0 auto;
+}
+
+.book img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.info-illustrator {
+  display: flex;
+}
+
+.info-designer {
+  display: flex;
+}
+
+.buttons {
+  z-index: 10;
+  position: absolute;
+  top: calc(50% - 50px);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 35px;
+}
+
+.scroll-btn {
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  background: none;
+  position: absolute;
+}
+
+.scroll-btn.left {
+  left: 75px;
+  display: block;
+}
+.scroll-btn.right {
+  right: 75px;
+  display: block;
+}
+
+.buttons.center {
+  top: 50%;
+}
+
+/* Карусель с отзывами */
+
+.review {
+  position: relative;
+  border-radius: 30px;
+  padding: 20px 30px;
+  flex: 0 0 calc((100% / 3) - 40px);
+  width: 445px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.review::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(to top right, #28ae60, #28aea1, #41b9ff);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.title-carousels.rev {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.name {
+  padding-bottom: 20px;
+  font-family: Manrope;
+  font-size: 32px;
+  font-weight: 400;
+  color: #061538;
+  opacity: 70%;
+  line-height: 120%;
+}
+.text-review {
+  font-family: Manrope;
+  font-size: 30px;
+  line-height: 120%;
+}
+
+.text-review.fire:after {
+  content: "\1F525""\1F525";
+}
+
+.carousels-reviews {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  height: 616px;
+  width: 100%;
+}
+
+.book-container.reviews {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-withReviews {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  width: 100%;
+  position: relative;
+}
+
+.review {
+  flex: 0 0 calc((100% / 3) - 40px);
+  max-width: 445px;
+  height: 250px;
+}
+
+.btn-review {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.reviewBtn {
+  cursor: pointer;
+  border: none;
+  background: #fcfcfc;
+}
+
+.leftBtn {
+  display: block;
+  padding-left: 75px;
+  padding-right: 20px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.rightBtn {
+  display: block;
+  padding-right: 75px;
+  padding-left: 20px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  right: 0;
+  z-index: 15;
+  position: absolute;
+}
+
+/* Карусель */
+
+/* .gallery-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 1840px;
+  position: relative;
+}
+
+.gallery-wrapper {
+  width: 1840px;
+  overflow: hidden;
+}
+
+.gallery {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery img {
+  flex: 0 0 calc(100% / 3);
+  height: auto;
+  object-fit: cover;
+} 
+
+
+.arrow {
+  border: none;
+  margin: 10px 15px;
+  border-radius: 100px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.leftBtn {
+  left: 40px;
+}
+
+.rightBtn {
+  right: 40px;
+}
+
+.leftBtn:disabled {
+  cursor: not-allowed;
+}
+.rightBtn:disabled {
+  cursor: not-allowed;
+} */
+

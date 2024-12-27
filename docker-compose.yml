@@ -1,0 +1,63 @@
+services:
+
+  postgres:
+    container_name: postgres
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: ${DB__NAME}
+      POSTGRES_USER: ${DB__USER}
+      POSTGRES_PASSWORD: ${DB__PASS}
+    ports:
+      - "${DB__PORT}:${DB__PORT}"
+    volumes:
+      - db_data:/var/lib/postgresql/data:cached
+    networks:
+      - backend
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - '${REDIS__PORT}:${REDIS__PORT}'
+    networks:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: make run_migr
+    tty: true
+    env_file:
+      - .env
+    ports:
+      - "${BACKEND_SERVER__PORT}:${BACKEND_SERVER__PORT}"
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - backend
+
+  frontend:
+    build:
+      context: ./frontend  # путь к директории фронтенда
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - backend
+
+volumes:
+  db_data:
+
+networks:
+  backend:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16

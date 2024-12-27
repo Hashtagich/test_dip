@@ -1,0 +1,5 @@
+Generic single-database configuration.
+
+
+ sudo docker volume prune -a
+ sudo docker image prune -a

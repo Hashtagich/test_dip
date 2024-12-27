@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AST</title>
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+<body>
+  <header class="header">
+    <div class="header-container container">
+      <a href="#">
+        <img src="./assets/svg/header-logo.svg" alt="header-logo">
+      </a>
+      <div class="menu-burger ostrovsky-caps" id="menuBurger">МЕНЮ</div>
+    </div>
+    <nav class="menu" id="menu">
+      <div class="menu-content">
+        <div class="menu-close" id="menuClose"><img src="./assets/svg/close-burger.svg" class="close-burger"></div>
+        <h2>САМЫЕ УДИВИТЕЛЬНЫЕ КНИГИ:</h2>
+        <div class="menu-columns">
+          <ol class="menu-column-left">
+            <li><a href="#">Двенадцать месяцев</a></li>
+            <li><a href="#">Приключения Буратино,<br> или Золотой ключик</a></li>
+            <li><a href="#">Кошкин дом</a></li>
+            <li><a href="#">Всё о кролике Питере</a></li>
+            <li><a href="#">Алиса в Стране Чудес</a></li>
+            <li><a href="#">Сказки</a></li>
+              </ol>
+              <ol class="menu-column-right">
+                <li value="7"><a href="#">Волшебник Изумрудного города</a></li>
+                <li><a href="./snow-queen.html">Снежная королева. Щелкунчик.<br> Госпожа Метелица</a></li>
+                <li><a href="#">Ветер в ивах</a></li>
+                <li><a href="#">Зимняя сказка</a></li>
+                <li><a href="#">Сказка о царе Салтане</a></li>
+                <li><a href="#">Алиса в Зазеркалье</a></li>
+              </ol>
+          </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="hero-container container">
+      <img src="./assets/png/заставка.png" alt="заставка">
+      <!-- тут должно быть видео -->
+    </div>
+    <div class="carousels">
+      <p class="title-carousels ostrovsky-caps">Присоединяйтесь к нашему путешествию <br>по сокровищам литературы!</p>
+      <div class="book-container">
+        <div class="book-wrapper" id="bookWrapper">
+            <div class="book"><a href="#"><img src="./assets/png/кролик.png" alt="Книга 1"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/двенадцать месяцев.png" alt="Книга 2"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/алиса.png" alt="Книга 3"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/царь салтан.png" alt="Книга 4"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/изумрудный город.png" alt="Книга 5"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/зимняя сказка.png" alt="Книга 6"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/кошкин дом.png" alt="Книга 7"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/буратино.png" alt="Книга 8"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/сказки.png" alt="Книга 9"></a></div>
+            <div class="book"><a href="./snow-queen.html"><img src="./assets/png/щелкунчик.png" alt="Книга 10"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/алиса 2.png" alt="Книга 11"></a></div>
+            <div class="book"><a href="#"><img src="./assets/png/ветер в ивах.png" alt="Книга 12"></a></div>
+        </div>
+        <div class="buttons">
+          <button class="scroll-btn left"><img src="./assets/svg/carousel-arrows/btn-left.svg"></button>
+          <button class="scroll-btn right"><img src="./assets/svg/carousel-arrows/btn-right.svg"></button>
+          </div>
+    </div>
+    </div>
+    <div class="infographics container">
+      <div class="infographics-content ">
+        <div class="column left">
+          <p class="about-book ostrovsky-caps">О КНИГАХ НАШЕЙ СЕРИИ</p>
+          <div class="about-book-text">
+            <img src="./assets/svg/ellipse.svg" class="elipse" alt="elipse">
+            <p class="description-books">печатаем на высококачественном мелованом картоне</p>
+          </div>
+          <div class="about-book-text">
+            <img src="./assets/svg/ellipse.svg" class="elipse" alt="elipse">
+            <p class="description-books">красочные объёмные развороты</p>
+          </div>
+          <div class="about-book-text">
+            <img src="./assets/svg/ellipse.svg" class="elipse" alt="elipse">
+            <p class="description-books">на каждой странице интерактивные подвижные элементы</p>
+          </div>
+          <div class="about-book-text">
+            <img src="./assets/svg/ellipse.svg" class="elipse" alt="elipse">
+            <p class="description-books">иллюстрации самых известных отечественных художников</p>
+          </div>
+          <div class="about-book-text">
+            <img src="./assets/svg/ellipse.svg" class="elipse" alt="elipse">
+            <p class="description-books">тексты классических сказок адаптированы для маленьких читателей</p>
+          </div>
+        </div>
+        <div class="column">
+          <img src="./assets/png/infographics.png" alt="infographics">
+        </div>
+      </div>
+    </div>
+    <div class="slogan-2 container">
+      <div class="slogan">
+        <img src="./assets/gif/ГИФ Кролик главная.gif" class="rabbit" alt="rabbit">
+        <div class="slogan-article">
+          <p class="article-top ostrovsky-caps">Каждая книга — это дверь в мир фантазии, где мечты сбываются.</p>
+          <p class="article-bottom manrope">Не пропустите наш баннер с новинками — там вас ждут самые свежие и увлекательные истории, готовые заворожить маленьких читателей!</p>
+        </div>
+      </div>
+    </div>
+    <section class="slider">
+      <div class="winter-stories slide">
+        <div class="winter-stories-container slide-container container">
+          <div class="winter-stories-content">
+            <div class="winter-stories-text">
+              <span class="winter-stories-new manrope">новинка</span>
+              <div class="winter-stories-description">
+                <h1 class="ostrovsky-caps">зимняя сказка</h1>
+                <p class="manrope">
+                  Книга не только расскажет малышу о смене сезонов, но и подарит всей семье тёплые минуты совместного чтения.
+                </p>
+              </div>
+            </div>
+            <div class="winter-stories-image">
+              <img src="./assets/svg/slider-banners/winter-stories.svg" alt="winter-book">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jubilee-banner slide">
+        <div class="jb-outside-container container">
+          <img class="confetti confetti-top" src="./assets/svg/slider-banners/confetti-top.svg" alt="confetti">
+          <img class="confetti confetti-bottom" src="./assets/svg/slider-banners/confetti-bottom.svg" alt="confetti">
+          <div class="jb-container slide-container">
+            <div class="jb-content">
+              <img src="./assets/svg/slider-banners/logo-white.svg" alt="logo">
+              <div class="jb-text">
+                <h1 class="jb-title">НАМ 5 ЛЕТ</h1>
+                <p class="jb-description">откройте для себя магию объёмных иллюстраций</p>
+              </div>
+            </div>
+            <div class="jb-images">
+              <img class="jb-image19" src="./assets/png/jubilee-slide/2019.png" alt="2019">
+              <img class="jb-image20" src="./assets/png/jubilee-slide/2020.png" alt="2020">
+              <img class="jb-image21" src="./assets/png/jubilee-slide/2021.png" alt="2021">
+              <img class="jb-image22" src="./assets/png/jubilee-slide/2022.png" alt="2022">
+              <img class="jb-image23" src="./assets/png/jubilee-slide/2023.png" alt="2023">
+              <img class="jb-image24" src="./assets/png/jubilee-slide/2024.png" alt="2024">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-btn-container container">
+        <div class="slider-buttons">
+            <a class="shop" href="https://ast.ru/book/zimnyaya-skazka-867810/?ysclid=m4vbc531xy77169262">В магазин</a>
+            <a class="about" href="https://ast.ru/book/zimnyaya-skazka-867810/?ysclid=m4vbc531xy77169262">Подробнее</a>
+        </div>
+        <div class="slider-arrows">
+            <div class="slider-left">
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M31.4976 38.8737L33.3643 36.9737L21.9309 25.5404L33.3643 14.107L31.4976 12.207L18.1643 25.5404L31.4976 38.8737Z"
+                  fill="#FCFCFC" />
+              </svg>
+            </div>
+            <div class="slider-right">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="arrow"
+                  d="M22.1333 39.2663L20.2666 37.3663L31.6999 25.9329L20.2666 14.4996L22.1333 12.5996L35.4666 25.9329L22.1333 39.2663Z"
+                  fill="#FCFCFC" />
+                <path
+                  d="M26 1C31.6351 1 37.1049 2.90376 41.5222 6.4025C45.9395 9.90124 49.0453 14.7897 50.3357 20.275C51.6261 25.7604 51.0255 31.5208 48.6313 36.6219C46.2371 41.7231 42.1897 45.8657 37.1457 48.378C32.1016 50.8902 26.3567 51.6247 20.8429 50.4623C15.329 49.2999 10.3696 46.3087 6.76901 41.974C3.16843 37.6393 1.1379 32.2153 1.00677 26.5818C0.875642 20.9482 2.65161 15.4356 6.04661 10.9381"
+                  stroke="#FCFCFC" stroke-width="2" />
+              </svg>
+            </div>
+        </div>
+      </div>
+    </section>
+    <div class="advantages-2 container">
+      <img src="./assets/gif/ГИФ Книга вырезка.gif" alt="book" class="book-fragment">
+      <div class="advantages2-article">
+        <p class="ostrovsky-caps">Книги нашей серии</p>
+        <div class="advantages">
+          <div class="group-advantages">
+            <img src="./assets/svg/ellipse.svg" alt="ellipse">
+            <p class="text-advantages manrope">Развивают воображение <br>и мелкую моторику</p>
+          </div>
+          <div class="group-advantages">
+            <img src="./assets/svg/ellipse.svg" alt="ellipse">
+            <p class="text-advantages manrope">Прививают любовь к чтению и никаких гаджетов</p>
+          </div>
+          <div class="group-advantages">
+            <img src="./assets/svg/ellipse.svg" alt="ellipse">
+            <p class="text-advantages manrope">Идеальный подарок для первого знакомства с чтением</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slogan-1 container">
+      <div class="slogan">
+        <div class="slogan-article">
+          <p class="article-top ostrovsky-caps">В волшебном мире книг каждый ребенок может стать героем удивительных приключений!</p>
+          <p class="article-bottom manrope">Наш каталог полон ярких историй, которые развивают воображение и учат доброте.</p>
+        </div>
+        <img src="./assets/gif/ГИФ Изумрудный город.gif" class="city" alt="city">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="social container">
+      <p class="ostrovsky-caps">Находи новых друзей с нами</p>
+      <div class="social-networks">
+        <a href="https://vk.com/izdatelstvoast">
+          <img src="./assets/svg/socials/logo-vk.svg" class="social-logo" alt="vk">
+        </a>
+        <a href="https://t.me/izdatelstvoast">
+          <img src="./assets/svg/socials/logo-telegram.svg" class="social-logo" alt="telegram">
+        </a>
+        <a href="https://www.youtube.com/user/AstIzdatelstvo">
+          <img src="./assets/svg/socials/logo-youtube.svg" class="social-logo" alt="youtube">
+        </a>
+        <a href="https://dzen.ru/izdatelstvoast">
+          <img src="./assets/svg/socials/logo-dzen.svg" class="social-logo" alt="dzen">
+        </a>
+        <a href="https://ok.ru/izdatelstvoast">
+          <img src="./assets/svg/socials/logo-ok.svg" class="social-logo" alt="ok">
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-container container">
+        <div class="footer-logo-policy">
+          <a href="https://ast.ru/">
+            <img src="./assets/svg/footer-logo.svg" class="footer-logo" alt="logo">
+          </a>
+          <a href="https://ast.ru/privacy_policy/">Политика конфиденциальности</a>
+        </div>
+        <div class="contacts">
+          <a href="tel:+74999516000"><p>Телефон: +7 499 951-60-00,<br> добавочный 574</p></a>
+          <a href="mailto:support@ast.ru"><p>Комментарии по работе<br> сайта — support@ast.ru</p></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

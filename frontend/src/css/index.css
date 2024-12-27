@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@font-face {
+  font-family: "Ostrovsky";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../../fonts/Ostrovsky-Bold_0.woff2") format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+  color: #061538;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fcfcfc;
+}
+
+.ostrovsky-caps {
+  font-size: calc(20px + 20 * (100vw - 320px) / 1640);
+  font-family: Ostrovsky;
+}
+
+.manrope {
+  font-family: Manrope;
+  font-size: calc(16px + 20 * (100vw - 320px) / 1640);
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  max-width: 1840px;
+  margin: 0 auto;
+  padding: 0 40px;
+  margin-bottom: 40px;
+}
+
+.header-container {
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 23px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fcfcfc;
+}
+
+.header,
+.footer-bottom {
+  box-shadow: 0px -1px 20px #06153833;
+}
+
+/* hero */
+
+.hero-container {
+  img {
+    max-width: 100%;
+  }
+}
+
+/* Карусель */
+
+.title-carousels {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.book-container {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  
+}
+
+.book-wrapper {
+  display: flex;
+  gap: 80px;
+  transition: transform 0.5s ease-in-out;
+  
+}
+
+.book {
+  flex: 0 0 calc((100% / 3.5) - 80px);
+  text-align: center;
+  overflow: hidden;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.buttons {
+  z-index: 10;
+  position: absolute;
+  top: calc(50% - 50px);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 35px;
+}
+
+/* .scroll-btn {
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  background: none;
+  position: absolute;
+} */
+
+.scroll-btn.left {
+  left: 75px;
+  display: block;
+}
+.scroll-btn.right {
+  right: 75px;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.scroll-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  position: absolute;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.svg-icon {
+  width: 100px;
+  height: 100px;
+  transition: filter 0.2s ease; /* Плавный переход цвета */
+}
+.scroll-btn:hover .circle {
+  fill: #28AE60; 
+}
+
+.scroll-btn:hover .arrow {
+  fill: #FFFFFF; /* Стрелка становится белой */
+}
+/* Преимущества-1 */
+
+.infographics {
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+  width: 90%;
+}
+
+.infographics-content {
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    max-width: 50%;
+    max-width: 650px;
+
+    &.left {
+      max-height: 700px;
+    }
+  }
+}
+
+.about-book {
+  margin-bottom: 30px;
+}
+
+.about-book-text {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.description-books {
+  font-family: Manrope;
+  font-weight: bold;
+  font-size: calc(16px + 16 * (100vw - 320px) / 1640);
+}
+
+/* Слайдер */
+
+.slider {
+  position: relative;
+}
+
+.slide-container {
+  height: 800px;
+  position: relative;
+  max-width: 1600px;
+}
+
+.slider-btn-container {
+  position: absolute;
+  max-width: 1600px;
+  width: 100%;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-family: Manrope;
+  font-weight: bold;
+  font-size: calc(16px + 16 * (100vw - 320px) / 1640);
+
+  .shop {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.1s ease, box-shadow 0.2s;
+    &:hover {
+      transform: scale(1.006);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .about {
+    transition: color 0.3s ease;
+    &:hover {
+      color: #fcfcfc;
+    }
+  }
+}
+
+.slider-arrows {
+  display: flex;
+  gap: 15px;
+  max-height: 50px;
+
+  .slider-left{
+    cursor: pointer;
+    &:hover {
+      path {
+        
+        fill: #061538;
+      }
+    }
+  }
+  .slider-right {
+    cursor: pointer;
+    &:hover {
+      path {
+        stroke: #061538;
+        &.arrow{
+          fill: #061538;
+        }
+      }
+    }
+  }
+  
+}
+
+/* Слайд зимняя сказка */
+
+.winter-stories {
+  background-color: #41b9ff;
+}
+
+.winter-stories-new {
+  color: #ffffff;
+  padding: 0 10px 8px 14px;
+  border: 3px solid white;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.winter-stories-content {
+  display: flex;
+}
+
+.winter-stories-text {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding-top: 100px;
+}
+
+.winter-stories-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-right: -20px;
+}
+
+.winter-stories-image {
+  display: flex;
+  align-items: center;
+}
+
+/* баннер 5 лет */
+
+.jb-outside-container {
+  position: relative;
+  justify-content: center;
+  max-width: 1920px;
+}
+
+.jubilee-banner {
+  background-color: #427143;
+
+  .confetti {
+    position: absolute;
+  }
+
+  .confetti-top {
+    top: 0;
+    left: 0;
+  }
+
+  .confetti-bottom {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.jb-container {
+  max-width: 1525px;
+  width: 100%;
+}
+
+.jb-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  padding-top: 70px;
+
+  .jb-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+
+    .jb-title {
+      font: 600 110px Ostrovsky;
+      color: #fcfcfc;
+    }
+
+    .jb-description {
+      font: 600 32px Ostrovsky;
+      color: #fcfcfc;
+      line-height: 50px;
+    }
+  }
+}
+
+.jb-images {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  gap: 30px;
+  margin-top: -250px;
+
+  .jb-image22 {
+    margin-left: -10px;
+  }
+  .jb-image23 {
+    padding-bottom: 75px;
+    margin-left: -12px;
+  }
+  .jb-image24 {
+    padding-bottom: 200px;
+    margin-left: -7px;
+  }
+}
+
+/* Лозунги */
+
+.slogan {
+  display: flex;
+  align-items: center;
+  max-width: 1527px;
+  gap: 40px;
+}
+
+.slogan-2,
+.slogan-1 {
+  justify-content: center;
+}
+
+.slogan-article {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.rabbit,
+.city,
+.book-fragment {
+  width: 50%;
+}
+
+.slogan-2 {
+  .article-top {
+    max-width: 680px;
+  }
+}
+
+/* Преимущества-2 */
+
+.advantages-2 {
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.advantages {
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.advantages2-article {
+  max-width: 640px;
+}
+
+.group-advantages {
+  display: flex;
+  gap: 20px;
+}
+
+/* footer */
+
+.social {
+  margin-block: 60px;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.social-networks {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-bottom-container {
+  justify-content: space-between;
+  padding-block: 40px;
+  margin-bottom: 0;
+
+  .footer-logo-policy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font: 500 20px Manrope;
+  }
+
+  .contacts {
+    font: 600 24px Manrope;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    a {
+      text-decoration: none;
+    }
+  }
+}
