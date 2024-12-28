@@ -27,6 +27,6 @@ WORKDIR /app/backend
 
 VOLUME /app/backend/research_data
 
-EXPOSE 8080
+EXPOSE 8001
 
 CMD ["python", "run.py"]

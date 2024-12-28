@@ -215,12 +215,14 @@ body {
   overflow: hidden;
   position: relative;
   margin: 0 auto;
+  
 }
 
 .book-wrapper {
   display: flex;
   gap: 80px;
   transition: transform 0.5s ease-in-out;
+  
 }
 
 .book {
@@ -245,13 +247,13 @@ body {
   padding-inline: 35px;
 }
 
-.scroll-btn {
+/* .scroll-btn {
   border: none;
   cursor: pointer;
   z-index: 10;
   background: none;
   position: absolute;
-}
+} */
 
 .scroll-btn.left {
   left: 75px;
@@ -262,6 +264,33 @@ body {
   display: block;
 }
 
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.scroll-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  position: absolute;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.svg-icon {
+  width: 100px;
+  height: 100px;
+  transition: filter 0.2s ease; /* Плавный переход цвета */
+}
+.scroll-btn:hover .circle {
+  fill: #28AE60; 
+}
+
+.scroll-btn:hover .arrow {
+  fill: #FFFFFF; /* Стрелка становится белой */
+}
 /* Преимущества-1 */
 
 .infographics {
@@ -672,17 +701,14 @@ body {
   position: relative;
   margin: 0 auto;
   padding-top: 256px;
-  height: 1113px;
+  height: 1130px;
   width: 100%;
+  background-image: url(cafe030e496722f78be7.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
 }
 
-.paper-blue {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-}
 
 .book-container.queeny {
   position: relative;
@@ -691,7 +717,7 @@ body {
   /* height: 1113px;  */
 }
 
-.book-wrapper {
+.book-wrapper.king {
   display: flex;
   gap: 20px;
   transition: transform 0.5s ease-in-out;
@@ -919,6 +945,8 @@ body {
   z-index: 15;
   position: absolute;
 }
+
+
 
 /* Карусель */
 
